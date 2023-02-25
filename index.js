@@ -101,6 +101,8 @@ function isOverC(numArray){
 }
 
 var numbers = [50, 50, 50];
+var alsoNumbers = [13, 27, 30, 12];
+
 console.log(isOverC(numbers));
 
 console.log(`
@@ -117,3 +119,49 @@ console.log(numAvg(numbers));
 
 console.log(`
 Question 11: Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.`)
+
+function checkArray(firstArray, secondArray){
+  let firstArrayAvg = 0;
+  let secondArrayAvg =0
+  
+  for(let i = 0; i < firstArray.length; i++){
+    firstArrayAvg = firstArrayAvg + firstArray[i];
+  };
+  firstArrayAvg = (firstArrayAvg / firstArray.length)
+  
+  for(let i = 0; i < secondArray.length; i++){
+    secondArrayAvg = secondArrayAvg + secondArray[i];
+  };
+  secondArrayAvg = (secondArrayAvg / secondArray.length)
+  return (firstArrayAvg > secondArrayAvg)
+}
+console.log(checkArray(numbers, alsoNumbers));
+
+console.log(`
+Question 12: Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.`);
+
+function willBuyDrink(isHotOutside, moneyInPocket){
+  if(isHotOutside === true && moneyInPocket > 10.50){
+    return true
+  }else {
+    return false
+  };
+}
+
+outsideTemp = false
+wallet = 20
+
+console.log(willBuyDrink(outsideTemp, wallet));
+
+console.log(`
+Question 13: Create a function of your own that solves a problem.
+
+The exponentiation function calculates a number to the power of another number.
+`);
+
+function exponentiation(num, exponent,) {
+  return(num**exponent);
+}
+num = 2;
+power = 3
+console.log(num, "to the power of", power, " = ", exponentiation(num,power));
