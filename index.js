@@ -83,8 +83,37 @@ console.log(wordsConcatenated('Hello', 4));
 
 console.log(`
 Question 8: Write a function that takes two parameters, firstName and lastName, and returns a full name.  The full name should be the first and the last name separated by a space.`);
+
 function fullName(firstName, lastName){
   return firstName + " " + lastName;
 }
 console.log(fullName('Sam', 'Huggins'));
 
+console.log(`
+Qustion 9:  Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.`)
+
+function isOverC(numArray){
+  let answer = 0;
+  for(let i = 0; i < numArray.length; i++){
+    answer = answer + numArray[i];  
+  }
+  return (answer > 100);
+}
+
+var numbers = [50, 50, 50];
+console.log(isOverC(numbers));
+
+console.log(`
+Question 10: Write a function that takes an array of numbers and returns the average of all the elements in the array.`);
+
+function numAvg(array){
+  let answer = 0
+  for(let i = 0; i < array.length; i++){
+    answer = answer + array[i];
+  }
+  return answer;
+}
+console.log(numAvg(numbers));
+
+console.log(`
+Question 11: Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.`)
